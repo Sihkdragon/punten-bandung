@@ -1,9 +1,9 @@
 <template>
-    <div class="w-full h-96 md:h-[500px] relative rounded bg-slate-200  overflow-hidden" data-aos="fade-up"
+    <div class="w-full h-96 2xl:h-[500px] relative rounded bg-slate-200  overflow-hidden" data-aos="fade-up"
         data-aos-duration="3000">
-        <div class="flex h-[500px] absolute gap-x-5 duration-1000" :style="styleSlide">
+        <div class="flex h-1/2 2xl:h-[500px] absolute gap-x-5 duration-1000" :style="styleSlide">
             <div v-for="image in imageURL" :key="image.id" class="w-[1345px] h-[500px]">
-                <img :src="image.url" alt="image.url" class=" object-containmd:object-cover w-full h-[500px]">
+                <img :src="image.url" alt="image.url" class=" object-scale-down 2xl:object-cover w-full h-[500px]">
             </div>
         </div>
         <div class="absolute flex bottom-5 w-full justify-center max-auto gap-x-3">

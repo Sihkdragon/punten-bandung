@@ -36,7 +36,7 @@
         </div>
         <div class="flex justify-center items-center my-10">
             <button
-                class="border border-slate-800 text-center text-slate-800 rounded-full px-4 py-2 hover:bg-slate-800 hover:text-slate-200 duration-500"
+                class=" duration-1000 border border-slate-800 text-center text-slate-800 rounded-full px-4 py-2 bg-white hover:bg-slate-800 hover:text-slate-200"
                 data-aos="fade" data-aos-duration="1000">Telusuri
                 lebih
                 banyak</button>

@@ -1,11 +1,11 @@
 <template>
-    <section class="mb-10 md:mb-32 lg:mb-64 mt-20 container" id="history">
+    <section class="mb-10 md:mb-0 2xl:mb-32 lg:mb-64 mt-20 container" id="history">
         <H1>Sejarah Kota Bandung</H1>
-        <div class="flex flex-col md:flex-row items-center gap-5">
-            <div class="basis-1/2 overflow-hidden w-fit h-fit flex justify-center items-center " data-aos="fade-right"
-                data-aos-duration="1000">
+        <div class="flex flex-col md:flex-row items-center gap-2 2xl:gap-5">
+            <div class="basis-1/2 overflow-hidden w-fit h-fit flex justify-center items-center p-2"
+                data-aos="fade-right" data-aos-duration="1000">
                 <img src="https://source.unsplash.com/500x500?bandung" alt="bandungimage"
-                    class=" rounded-full object-fill border-2 border-white my-1 outline shadow-lg block outline-slate-700 hover:scale-95 duration-300 overflow-hidden">
+                    class="rounded-full object-fill border-2 border-white my-1 outline shadow-lg block outline-slate-700 hover:scale-95 duration-300 overflow-hidden">
             </div>
             <p class="basis-1/2 text-slate-700 text-justify leading-8" data-aos="fade-left" data-aos-duration="1000">
                 Kota kembang merupakan sebutan lain untuk kota
