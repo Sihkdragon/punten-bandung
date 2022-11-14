@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
+import TabloidView from "../views/TabloidView.vue";
+import GalleryView from "../views/GalleryView.vue";
+import AboutView from "../views/AboutView.vue";
 import Navbar from "../components/complex/Navbar.vue";
 import Footer from "../components/complex/Footer.vue";
 import Sidebar from "../components/complex/Sidebar.vue";
@@ -17,13 +20,43 @@ const router = createRouter({
       },
     },
     {
+      path: "/tabloid",
+      name: "tabloid",
+      components: {
+        default: () => TabloidView,
+        Navbar: () => Navbar,
+        Footer: () => Footer,
+        Sidebar: () => Sidebar,
+      },
+    },
+    {
+      path: "/gallery",
+      name: "gallery",
+      components: {
+        default: () => GalleryView,
+        Navbar: () => Navbar,
+        Footer: () => Footer,
+        Sidebar: () => Sidebar,
+      },
+    },
+    {
       path: "/about",
       name: "about",
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import("../views/AboutView.vue"),
+      components: {
+        default: () => AboutView,
+        Navbar: () => Navbar,
+        Footer: () => Footer,
+        Sidebar: () => Sidebar,
+      },
     },
+    // {
+    //   path: "/about",
+    //   name: "about",
+    // route level code-splitting
+    // this generates a separate chunk (About.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    //   component: () => import("../views/AboutView.vue"),
+    // },
   ],
 });
 function capitalize(string) {
