@@ -17,6 +17,7 @@
 <script>
 import { POSTS_LISTS } from '../../app/libs/resource/posts';
 export default {
+    name: 'Sidebar',
     data() {
         return {
             POSTList: POSTS_LISTS

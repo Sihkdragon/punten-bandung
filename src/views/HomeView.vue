@@ -3,7 +3,7 @@
 
 <template>
   <main class=" flex flex-col md:gap-y-5 ">
-    <section id="jumbotron" class="container min-h-screen pt-10  md:pt-24 2xl:pt-28  relative">
+    <section id="jumbotron" class=" h-full container min-h-screen pt-10  md:pt-24 2xl:pt-28  relative flex flex-wrap">
       <div class="hidden md:flex gap-x-4 justify-center text-white items-center my-2 2xl:my-5 font-main cursor-default">
         <span
           class="bg-rose-600 hover:bg-opacity-80 duration-300 rounded-full px-1 md:px-2 md:py-1 text-xs 2xl:text-base"
@@ -20,12 +20,12 @@
           Wisata</span>
       </div>
       <Hero />
-      <div class="left-0 right-0 flex justify-center items-center  absolute bottom-14 2xl:bottom-20">
-        <a href="/#quote" class="flex justify-center flex-col hover:text-slate-700 duration-500 group">
+      <div class="flex justify-center items-center min-h-full flex-grow">
+        <a href="/#quote" class="flex justify-center flex-col hover:text-slate-700 duration-500 group b">
           <span class="text-sm 2xl:text-base ">
             Explore More
           </span>
-          <ChevronDownIcon class="w-6 2xl:w-8 mx-auto text-slate-500 group-hover:translate-y-1 duration-500" />
+          <ChevronDownIcon class="w-2 -mt-1  2xl:w-8 mx-auto text-slate-500 group-hover:translate-y-1 duration-500" />
         </a>
       </div>
     </section>

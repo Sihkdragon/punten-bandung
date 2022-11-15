@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import TabloidView from "../views/TabloidView.vue";
 import GalleryView from "../views/GalleryView.vue";
 import AboutView from "../views/AboutView.vue";
+import NotFoundView from "../views/NotFoundView.vue";
 import Navbar from "../components/complex/Navbar.vue";
 import Footer from "../components/complex/Footer.vue";
 import Sidebar from "../components/complex/Sidebar.vue";
@@ -23,7 +24,7 @@ const router = createRouter({
       path: "/tabloid",
       name: "tabloid",
       components: {
-        default: () => TabloidView,
+        main: () => TabloidView,
         Navbar: () => Navbar,
         Footer: () => Footer,
         Sidebar: () => Sidebar,
@@ -33,7 +34,7 @@ const router = createRouter({
       path: "/gallery",
       name: "gallery",
       components: {
-        default: () => GalleryView,
+        main: () => GalleryView,
         Navbar: () => Navbar,
         Footer: () => Footer,
         Sidebar: () => Sidebar,
@@ -43,11 +44,16 @@ const router = createRouter({
       path: "/about",
       name: "about",
       components: {
-        default: () => AboutView,
+        main: () => AboutView,
         Navbar: () => Navbar,
         Footer: () => Footer,
         Sidebar: () => Sidebar,
       },
+    },
+    {
+      path: "/:pathMatch(.*)*",
+      name: "NotFoundPage",
+      component: NotFoundView,
     },
     // {
     //   path: "/about",
