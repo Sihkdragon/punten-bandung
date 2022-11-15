@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import TabloidView from "../views/TabloidView.vue";
+import TabloidReadView from "../views/TabloidReadView.vue";
 import GalleryView from "../views/GalleryView.vue";
 import AboutView from "../views/AboutView.vue";
 import NotFoundView from "../views/NotFoundView.vue";
@@ -25,6 +26,16 @@ const router = createRouter({
       name: "tabloid",
       components: {
         main: () => TabloidView,
+        Navbar: () => Navbar,
+        Footer: () => Footer,
+        Sidebar: () => Sidebar,
+      },
+    },
+    {
+      path: "/tabloid/:id",
+      name: "Baca",
+      components: {
+        main: () => TabloidReadView,
         Navbar: () => Navbar,
         Footer: () => Footer,
         Sidebar: () => Sidebar,

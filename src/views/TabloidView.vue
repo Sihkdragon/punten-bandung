@@ -1,81 +1,59 @@
 <template>
-    <section class="container min-h-screen">
-        <div class="slider h-97  w-full flex flex-grow overflow-hidden">
-            <!-- <div class="h-96 min-w-full basis-full" v-for="item in ItemCount" :key="item.id"
-                :class="`bg-${item.color}-500`"></div> -->
-
-            <div class="h-96 min-w-full basis-full bg-blue-500 duration-1000 ease-in-out" :style="transX"></div>
-            <div class="h-96 min-w-full basis-full bg-green-500 duration-1000 ease-in-out" :style="transX"></div>
-            <div class="h-96 min-w-full basis-full bg-red-500 duration-1000 ease-in-out" :style="transX"></div>
-
-        </div>
-        <button class="bg-slate-500 px-2 py-1 mt-10 ml-2 rounded text-white" @click="prevSlide">left</button>
-        <button class="bg-slate-500 px-2 py-1 mt-10 ml-2 rounded text-white" @click="nextSlide">right</button>
-        <h1>{{ ItemCount.length }}</h1>
-        <h1>{{ yValue }}</h1>
-    </section>
+    <main class="pt-10 md:pt-24 2xl:pt-28 ">
+        <section class="container min-h-screen">
+            <H1>Tabloid's</H1>
+            <div class="grid grid-cols-2 gap-5">
+                <div class="w-full border rounded-sm overflow-hidden" v-for="post in POSTList" :key="post.id">
+                    <figure class="w-full h-64 overflow-hidden group">
+                        <img :src="`https://source.unsplash.com/300x27${post.id}?bandung`" alt="thumbnail"
+                            class="object-fill w-full group-hover:scale-110 duration-500">
+                    </figure>
+                    <div class="p-3 shadow">
+                        <h3 class="font-semibold text-slate-700 text-lg my-1">{{ post.title }}</h3>
+                        <p class="font-extralight text-sm text-slate-500 my-3">Preview : Lorem ipsum dolor sit, amet
+                            consectetur
+                            adipisicing elit. Earum facilis quo sit
+                            necessitatibus, cupiditate id corporis culpa quisquam eligendi ipsa....</p>
+                        <span class="text-slate-600 my-1">Editor : {{ post.editor }}</span>
+                        <span class="text-slate-500 my-1 block text-sm">Senin, 12 November 2022</span>
+                        <div class="flex justify-between  items-center my-4">
+                            <div class="flex gap-4 items-center">
+                                <span class="text-slate-600">Tag : </span>
+                                <div
+                                    class="rounded-full text-sm px-2 py-1 bg-blue-500 text-slate-100 cursor-pointer hover:bg-opacity-80 duration-300">
+                                    Tag 1</div>
+                                <div
+                                    class="rounded-full text-sm px-2 py-1 bg-amber-500 text-slate-100 cursor-pointer hover:bg-opacity-80 duration-300">
+                                    Tag 2</div>
+                                <div
+                                    class="rounded-full text-sm px-2 py-1 bg-lime-500 text-slate-100 cursor-pointer hover:bg-opacity-80 duration-300">
+                                    Tag 3</div>
+                            </div>
+                            <a :href="post.url"
+                                class="border border-slate-700 text-slate-700 px-3 py-1 rounded duration-500 hover:bg-blue-500 hover:text-white hover:border-blue-700">Baca</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 </template>
 
 <script>
+import H1 from '../components/basic/Home/HeadingSection.vue'
+import { POSTS_LISTS } from '../app/libs/resource/posts'
 export default {
-    data: () => {
+    components: {
+        H1
+    },
+    data() {
         return {
-            ItemCount: [
-                { color: 'blue', id: 1, isActive: true },
-                { color: 'green', id: 2, isActive: false },
-                { color: 'red', id: 3, isActive: false },
-            ],
-            activeIndex: 0,
-            yValue: 0,
-            isReversed: false
-        }
-    },
-    mounted() {
-        setInterval(() => {
-            if (!this.isReversed) {
-                this.yValue += 1
-                if (this.yValue === this.ItemCount.length - 1) {
-                    this.isReversed = true
-                }
-            } else {
-                this.yValue -= 1
-                if (this.yValue === 0) {
-                    this.isReversed = false
-                }
-            }
-        }, 8000)
-    },
-    methods: {
-        nextSlide() {
-            if (this.yValue < this.ItemCount.length - 1) {
-                this.yValue += 1
-            }
-
-        },
-        prevSlide() {
-            if (this.yValue >= 1) {
-                this.yValue -= 1
-            }
-        },
-    },
-    computed: {
-        transX() {
-            return `transform: translateX(-${this.yValue}00%)`
+            POSTList: POSTS_LISTS
         }
     }
 }
 </script>
 
 <style>
-.firstActive {
-    transform: translate(0, 0);
-}
 
-.secondActive {
-    transform: translate(0, -100%);
-}
-
-.thirdActive {
-    transform: translate(0, -200%);
-}
 </style>

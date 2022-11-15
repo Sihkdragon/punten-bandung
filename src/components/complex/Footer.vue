@@ -11,13 +11,13 @@
                     <li class=" hover:underline hover:text-blue-500 duration-300">
                         <a href="https://www.instagram.com/pbandung.media" target="_blank" class="flex gap-x-2">
                             <InstagramIcon />
-                            <span>Instagram</span>
+                            <span>pbandung.media</span>
                         </a>
                     </li>
                     <li class=" hover:underline hover:text-blue-500 duration-300">
                         <a href="https://wa.me/6282128002135" target="_blank" class="flex gap-x-2">
                             <WhatsappIcon />
-                            <span>Whatsapp</span>
+                            <span>(+62) 82119998833</span>
                         </a>
                     </li>
                     <li class=" hover:underline hover:text-blue-500 duration-300">

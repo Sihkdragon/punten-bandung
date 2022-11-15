@@ -1,5 +1,5 @@
 <template>
-    <nav class="hidden md:block absolute right-3 2xl:right-6 border-2 bg-white shadow top-32 2xl:top-28 border-slate-300 rounded-sm px-1 2xl:px-2 py-4 mt-10 w-56 2xl:w-64 z-10"
+    <nav class="hidden md:block absolute right-3 2xl:right-6 border-2 bg-white shadow top-32 xl:top-28 border-slate-300 rounded-sm px-1 2xl:px-2 py-4 mt-10 w-56 xl:w-64 z-10"
         data-aos="slide-left" data-aos-duration="1000">
         <h3 class="font-bold tracking-wide text-lg">Recent Post's</h3>
         <div class="border rounded  py-5 px-1 2xl:px-2 mt-3 bg-slate-100">
