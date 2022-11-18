@@ -4,62 +4,40 @@ import TabloidView from "../views/TabloidView.vue";
 import TabloidReadView from "../views/TabloidReadView.vue";
 import GalleryView from "../views/GalleryView.vue";
 import AboutView from "../views/AboutView.vue";
+import LoginView from "../views/LoginView.vue";
 import NotFoundView from "../views/NotFoundView.vue";
-import Navbar from "../components/complex/Navbar.vue";
-import Footer from "../components/complex/Footer.vue";
-import Sidebar from "../components/complex/Sidebar.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/",
       name: "home",
-      components: {
-        default: () => HomeView,
-        Navbar: () => Navbar,
-        Footer: () => Footer,
-        Sidebar: () => Sidebar,
-      },
+      component: HomeView,
     },
     {
       path: "/tabloid",
       name: "tabloid",
-      components: {
-        main: () => TabloidView,
-        Navbar: () => Navbar,
-        Footer: () => Footer,
-        Sidebar: () => Sidebar,
-      },
+      component: TabloidView,
     },
     {
       path: "/tabloid/:id",
       name: "Baca",
-      components: {
-        main: () => TabloidReadView,
-        Navbar: () => Navbar,
-        Footer: () => Footer,
-        Sidebar: () => Sidebar,
-      },
+      component: TabloidReadView,
     },
     {
       path: "/gallery",
       name: "gallery",
-      components: {
-        main: () => GalleryView,
-        Navbar: () => Navbar,
-        Footer: () => Footer,
-        Sidebar: () => Sidebar,
-      },
+      component: GalleryView,
     },
     {
       path: "/about",
       name: "about",
-      components: {
-        main: () => AboutView,
-        Navbar: () => Navbar,
-        Footer: () => Footer,
-        Sidebar: () => Sidebar,
-      },
+      component: AboutView,
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: LoginView,
     },
     {
       path: "/:pathMatch(.*)*",

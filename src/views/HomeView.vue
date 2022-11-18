@@ -2,7 +2,9 @@
 </script>
 
 <template>
-  <main class=" flex flex-col md:gap-y-5 ">
+  <Navbar />
+  <Sidebar />
+  <main class=" flex flex-col md:gap-y-5 py-10">
     <section id="jumbotron" class=" h-full container min-h-screen pt-10  md:pt-24 2xl:pt-28  relative flex flex-wrap">
       <div class="hidden md:flex gap-x-4 justify-center text-white items-center my-2 2xl:my-5 font-main cursor-default">
         <span
@@ -33,7 +35,7 @@
     <History />
     <FavouriteDestination />
   </main>
-
+  <Footer />
 </template>
 <script >
 import { ChevronDownIcon } from '@heroicons/vue/24/outline'
@@ -41,9 +43,19 @@ import Hero from '../components/complex/Hero.vue'
 import History from '../components/complex/Home/HistorySection.vue'
 import Quotes from '../components/complex/Home/QuotesSection.vue'
 import FavouriteDestination from '../components/complex/Home/FavouriteDestinationSection.vue'
+import Navbar from '../components/complex/Navbar.vue'
+import Sidebar from '../components/complex/Sidebar.vue'
+import Footer from '../components/complex/Footer.vue'
 export default {
   components: {
-    Hero, History, Quotes, FavouriteDestination, ChevronDownIcon
+    Hero,
+    History,
+    Quotes,
+    FavouriteDestination,
+    ChevronDownIcon,
+    Navbar,
+    Sidebar,
+    Footer
   },
   data() {
     return {

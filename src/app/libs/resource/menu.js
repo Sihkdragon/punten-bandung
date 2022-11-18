@@ -6,21 +6,16 @@ const MENU = [
   },
   {
     id: 2,
-    name: "Rekomendasi",
-    to: "/recommendation",
-  },
-  {
-    id: 3,
     name: "Tabloid",
     to: "/tabloid",
   },
   {
-    id: 4,
+    id: 3,
     name: "Galeri",
     to: "/gallery",
   },
   {
-    id: 5,
+    id: 4,
     name: "Tentang Kami",
     to: "/about",
   },

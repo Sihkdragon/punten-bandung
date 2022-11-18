@@ -14,6 +14,11 @@
                     <li class="hover:text-slate-400 duration-500 hover:underline" v-for="item in menu" :key="item.id">
                         <RouterLink :to="item.to">{{ item.name }}</RouterLink>
                     </li>
+                    <li>
+                        <RouterLink to="/login"
+                            class="text-blue-700 rounded border border-blue-700 px-3 py-1 text-sm duration-500 hover:text-white hover:bg-blue-500 hover:border-blue-500">
+                            Masuk</RouterLink>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -41,7 +46,7 @@ export default {
         return {
             menu: MENU,
             defaultMenuDisplay: 'bg-white rounded  fixed  top-1 right-1 left-1 bottom-0 z-30 border h-full items-center flex flex-col gap-y-5 py-20 text-slate-500 translate-y-full ',
-            smallScreenMenuDisplay: 'bg-white rounded  fixed  top-1 right-1 left-1 bottom-0 z-30 border h-full items-center flex flex-col gap-y-5 py-20 text-slate-500 translate-y-0 ',
+            smallScreenMenuDisplay: 'bg-white rounded  fixed  top-1 right-1 left-1 bottom-0 z-50 border h-full items-center flex flex-col gap-y-5 py-20 text-slate-500 translate-y-0 ',
             isNavOpen: false
         }
     },

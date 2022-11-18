@@ -3,33 +3,16 @@ const POSTS_LISTS = [
     id: 1,
     title: "KIARA ARTHA PARK : TEMPAT HEALING MURAH DI BANDUNG",
     url: ".com",
+    redacture: { name: "admin" },
     editor: "Nyimas Nabilah Zachwa",
-  },
-  {
-    id: 2,
-    title:
-      "LAWANGWANGI CREATIVE SPACE : HEALING AESTHETIC DITEMANI KOLEKSI KARYA SENI DAN PEMANDANGAN ASRI KOTA BANDUNG",
-    url: ".com",
-    editor: "Yemima Philosophia",
-  },
-  {
-    id: 3,
-    title: "KEINDAHAN MAHAKARYA I NYOMAN NUARTA YANG MEMANJAKAN MATA PARA PENGUNJUNG",
-    url: ".com",
-    editor: "Ahmad Irfan Rasyid",
-  },
-  {
-    id: 4,
-    title:
-      "HIDDEN FARM PLANTSHOP CAFE : TEMPAT BERSAHAJA SAMBIL MENIKMATI SEJUKNYA ALAM PERKEBUNAN",
-    url: ".com",
-    editor: "Elma Zahra",
-  },
-  {
-    id: 5,
-    title: "KINERUKU BANDUNG : SECANGKIR KOPI DAN BUKU UNTUK MENIKMATI SENJA YANG DAMAI",
-    url: ".com",
-    editor: "Siva Salsabila",
+    body: "this is body",
+    thumbnail_url: "https://source.unsplash.com/300x270?bandung",
+    created_at: "2022-11-18T16:46:30.942Z",
+    tags: {
+      tag1: "default 1",
+      tag2: "default 2",
+      tag3: "default 3",
+    },
   },
 ];
 
