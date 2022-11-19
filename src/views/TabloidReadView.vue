@@ -1,5 +1,6 @@
 <template>
-    <main class="pt-10 md:pt-24 2xl:pt-28 ">
+    <Navbar />
+    <main class="pt-10 md:py-36 2xl:py-44 ">
         <section class="container min-h-screen">
             <div class="h-[500px] overflow-hidden">
                 <img src="https://source.unsplash.com/1280x1080?bandung" alt="" srcset="">
@@ -69,15 +70,20 @@
             </form>
         </section>
     </main>
+    <Footer />
 </template>
     
 <script>
 
 import H1 from '../components/basic/Home/HeadingSection.vue'
+import Navbar from '../components/complex/Navbar.vue'
+import Footer from '../components/complex/Footer.vue'
 import { POSTS_LISTS } from '../app/libs/resource/posts'
 export default {
     components: {
-        H1
+        H1,
+        Navbar,
+        Footer
     },
     data() {
         return {
