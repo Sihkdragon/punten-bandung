@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import { POSTS_LISTS } from '../../app/libs/resource/posts';
+import { POSTS_LISTS } from '../../../app/libs/resource/posts';
 export default {
     name: 'Sidebar',
     data() {

@@ -39,13 +39,13 @@
 </template>
 <script >
 import { ChevronDownIcon } from '@heroicons/vue/24/outline'
-import Hero from '../components/complex/Hero.vue'
-import History from '../components/complex/Home/HistorySection.vue'
-import Quotes from '../components/complex/Home/QuotesSection.vue'
-import FavouriteDestination from '../components/complex/Home/FavouriteDestinationSection.vue'
-import Navbar from '../components/complex/Navbar.vue'
-import Sidebar from '../components/complex/Sidebar.vue'
-import Footer from '../components/complex/Footer.vue'
+import Hero from '../../components/complex/Home/Hero.vue'
+import History from '../../components/complex/Home/HistorySection.vue'
+import Quotes from '../../components/complex/Home/QuotesSection.vue'
+import FavouriteDestination from '../../components/complex/Home/FavouriteDestinationSection.vue'
+import Navbar from '../../components/complex/Public/Navbar.vue'
+import Sidebar from '../../components/complex/Public/Sidebar.vue'
+import Footer from '../../components/complex/Public/Footer.vue'
 export default {
   components: {
     Hero,

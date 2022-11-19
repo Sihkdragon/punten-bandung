@@ -7,9 +7,9 @@
   <Footer />
 </template>
 <script>
-import Navbar from '../components/complex/Navbar.vue'
-import Sidebar from '../components/complex/Sidebar.vue'
-import Footer from '../components/complex/Footer.vue'
+import Navbar from '../../components/complex/Public/Navbar.vue'
+import Sidebar from '../../components/complex/Public/Sidebar.vue'
+import Footer from '../../components/complex/Public/Footer.vue'
 export default {
   components: {
 

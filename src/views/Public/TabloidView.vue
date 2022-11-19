@@ -47,13 +47,13 @@
 </template>
 
 <script>
-import H1 from '../components/basic/Home/HeadingSection.vue'
-import _Tabloid from '../app/services/TabloidService'
-import { POSTS_LISTS } from '../app/libs/resource/posts'
-import getReadableDate from '../app/libs/helpers/utils/dateHelpers'
-import Navbar from '../components/complex/Navbar.vue'
-import Sidebar from '../components/complex/Sidebar.vue'
-import Footer from '../components/complex/Footer.vue'
+import H1 from '../../components/basic/Home/HeadingSection.vue'
+import _Tabloid from '../../app/services/TabloidService'
+import { POSTS_LISTS } from '../../app/libs/resource/posts'
+import getReadableDate from '../../app/libs/helpers/utils/dateHelpers'
+import Navbar from '../../components/complex/Public/Navbar.vue'
+import Sidebar from '../../components/complex/Public/Sidebar.vue'
+import Footer from '../../components/complex/Public/Footer.vue'
 export default {
     components: {
         H1,

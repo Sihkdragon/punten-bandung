@@ -25,11 +25,11 @@
 </template>
 
 <script>
-import H1 from '../components/basic/Home/HeadingSection.vue'
-import _Gallery from '../app/services/GalleryService'
-import Navbar from '../components/complex/Navbar.vue'
-import Sidebar from '../components/complex/Sidebar.vue'
-import Footer from '../components/complex/Footer.vue'
+import H1 from '../../components/basic/Home/HeadingSection.vue'
+import _Gallery from '../../app/services/GalleryService'
+import Navbar from '../../components/complex/Public/Navbar.vue'
+import Sidebar from '../../components/complex/Public/Sidebar.vue'
+import Footer from '../../components/complex/Public/Footer.vue'
 export default {
     components: {
         H1,
@@ -39,7 +39,6 @@ export default {
     },
     mounted() {
         _Gallery.getAllImage().then((r) => {
-            // console.log(r.data)
             if (r.data.statusCode === 200) {
                 this.galleryData = r.data.payload
             } else {

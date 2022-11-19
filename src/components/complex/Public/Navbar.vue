@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import MENU from '../../app/libs/resource/menu';
+import MENU from '../../../app/libs/resource/menu';
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/outline';
 export default {
     components: {

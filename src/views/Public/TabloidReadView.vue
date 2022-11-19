@@ -75,10 +75,10 @@
     
 <script>
 
-import H1 from '../components/basic/Home/HeadingSection.vue'
-import Navbar from '../components/complex/Navbar.vue'
-import Footer from '../components/complex/Footer.vue'
-import { POSTS_LISTS } from '../app/libs/resource/posts'
+import H1 from '../../components/basic/Home/HeadingSection.vue'
+import Navbar from '../../components/complex/Public/Navbar.vue'
+import Footer from '../../components/complex/Public/Footer.vue'
+import { POSTS_LISTS } from '../../app/libs/resource/posts'
 export default {
     components: {
         H1,

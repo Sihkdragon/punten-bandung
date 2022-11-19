@@ -1,12 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import TabloidView from "../views/TabloidView.vue";
-import TabloidReadView from "../views/TabloidReadView.vue";
-import GalleryView from "../views/GalleryView.vue";
-import AboutView from "../views/AboutView.vue";
+import HomeView from "../views/Public/HomeView.vue";
+import TabloidView from "../views/Public/TabloidView.vue";
+import TabloidReadView from "../views/Public/TabloidReadView.vue";
+import GalleryView from "../views/Public/GalleryView.vue";
+import AboutView from "../views/Public/AboutView.vue";
 import LoginView from "../views/Auth/LoginView.vue";
 import RegisterView from "../views/Auth/RegisterView.vue";
-import NotFoundView from "../views/NotFoundView.vue";
+import NotFoundView from "../views/Public/NotFoundView.vue";
+// User Page Import
+import DashboardView from "../views/User/Dashboard.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -46,6 +48,11 @@ const router = createRouter({
       component: RegisterView,
     },
     {
+      path: "/dashboard",
+      name: "dashboard",
+      component: DashboardView,
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "NotFoundPage",
       component: NotFoundView,
@@ -59,6 +66,9 @@ const router = createRouter({
     //   component: () => import("../views/AboutView.vue"),
     // },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 };
+  },
 });
 function capitalize(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);

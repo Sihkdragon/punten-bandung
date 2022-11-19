@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import NavbarVue from '../complex/Navbar.vue';
+import NavbarVue from '../complex/Public/Navbar.vue';
 export default {
     components: {
         NavbarVue

@@ -55,7 +55,7 @@ import MENU from '@/app/libs/resource/menu.js';
 import InstagramIcon from '@/assets/icon/InstagramIcon.vue'
 import WhatsappIcon from '@/assets/icon/WhatsappIcon.vue'
 import BrowserIcon from '@/assets/icon/BrowserIcon.vue'
-import { POSTS_LISTS } from '../../app/libs/resource/posts';
+import { POSTS_LISTS } from '../../../app/libs/resource/posts';
 export default {
     components: {
         InstagramIcon,
