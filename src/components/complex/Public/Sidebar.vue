@@ -6,7 +6,7 @@
             <ul class="list-disc 2xl:ml-3 flex flex-col gap-y-5 xl:w-52 2xl:w-56 px-5 2xl:px-3 ">
                 <li class="hover:text-blue-500 duration-100 hover:underline text-[10px] 2xl:text-sm "
                     v-for="post in POSTList" :key="post.id">
-                    <RouterLink :to="post.url"> {{ post.title }}
+                    <RouterLink to="/"> {{ post.title }}
                     </RouterLink>
                 </li>
             </ul>
@@ -16,12 +16,20 @@
 
 <script>
 import { POSTS_LISTS } from '../../../app/libs/resource/posts';
+import _Tabloid from '../../../app/services/TabloidService'
 export default {
     name: 'Sidebar',
     data() {
         return {
-            POSTList: POSTS_LISTS
+            POSTList: []
         }
+    },
+    mounted() {
+        _Tabloid.getAllTabloids().then((r) => {
+            if (r.data.statusCode === 200) {
+                this.POSTList = r.data.payload.slice(0, 5)
+            }
+        })
     }
 }
 </script>

@@ -10,6 +10,10 @@ class TabloidService extends BaseService {
   async getAllTabloids() {
     return await axios.get(this.url);
   }
+
+  async getTabloid(id) {
+    return await axios.get(this.url + "/" + +id);
+  }
 }
 
 const _Tabloid = new TabloidService();

@@ -34,7 +34,7 @@
                                         class="rounded-full text-xs px-2 py-1 bg-lime-500 text-slate-100 cursor-pointer hover:bg-opacity-80 duration-300">
                                         {{ post.tags.tag3 }}</div>
                                 </div>
-                                <a :href="post.url"
+                                <a :href="`/tabloid/${post.id}`"
                                     class="border border-slate-700 text-slate-700 px-3 py-1 rounded duration-500 hover:bg-blue-500 hover:text-white hover:border-blue-700">Baca</a>
                             </div>
                         </div>
