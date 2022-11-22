@@ -956,6 +956,11 @@
   optionalDependencies:
     "fsevents" "~2.3.2"
 
+"vue-cookies@^1.8.2":
+  "integrity" "sha512-+NfoC5l+7ybuVwpnqsf52qndnoYMjEb4EFhX4/j9RzzQP00dNzuJELsWuW2p8omNUzNlSgWGVyyWoOeJr347tw=="
+  "resolved" "https://registry.npmjs.org/vue-cookies/-/vue-cookies-1.8.2.tgz"
+  "version" "1.8.2"
+
 "vue-router@^4.1.5":
   "integrity" "sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ=="
   "resolved" "https://registry.npmjs.org/vue-router/-/vue-router-4.1.6.tgz"
