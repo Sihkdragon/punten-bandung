@@ -9,6 +9,7 @@ import RegisterView from "../views/Auth/RegisterView.vue";
 import NotFoundView from "../views/Public/NotFoundView.vue";
 // User Page Import
 import DashboardView from "../views/User/Dashboard.vue";
+import WriteTabloidView from "../views/User/WriteTabloidView.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -53,18 +54,15 @@ const router = createRouter({
       component: DashboardView,
     },
     {
+      path: "/write",
+      name: "tulis",
+      component: WriteTabloidView,
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "NotFoundPage",
       component: NotFoundView,
     },
-    // {
-    //   path: "/about",
-    //   name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (About.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    //   component: () => import("../views/AboutView.vue"),
-    // },
   ],
   scrollBehavior(to, from, savedPosition) {
     return { top: 0 };

@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import MenuChild from '../../basic/Home/MenuChild.vue';
+import MenuChild from '../../basic/User/MenuChild.vue';
 import { XMarkIcon, Bars3Icon } from '@heroicons/vue/24/outline';
 export default {
     props: {
