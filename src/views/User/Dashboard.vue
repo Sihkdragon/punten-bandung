@@ -1,11 +1,11 @@
 <template>
     <main class="min-h-screen flex relative">
         <NavbarUser />
-        <div class="w-full py-10 px-12 ml-96">
+        <div class="w-full py-10 px-12 container">
             <h1 class="text-4xl font-bold text-zinc-600">Tulis Tabloid</h1>
             <div class="w-full h-[1px] bg-black/40 my-10"></div>
-            <form class="w-full h-full ">
-                <div class="form-control w-full flex gap-10">
+            <form class="w-full h-full " @submit="handleSubmit">
+                <fieldset class="form-control w-full flex gap-10">
                     <div class="basis-1/2">
                         <label for="thumbnail" v-if="!image"
                             class="text-zinc-700 text-2xl  cursor-pointer font-semibold">
@@ -20,19 +20,21 @@
                         </div>
                         <label for="title" class="text-zinc-700 text-lg">Judul</label>
                         <div class="form-control w-full">
-                            <input type="text" placeholder="Judul" id="title"
+                            <input type="text" placeholder="Judul" id="title" v-model="title"
                                 class="border-b w-full text-2xl text-zinc-800 focus:outline-none">
                         </div>
+                        <button type="submit"
+                            class="bg-blue-500 px-4 py-1 rounded text-white hover:bg-opacity-80">Submit</button>
                     </div>
                     <div class="flex flex-col w-full gap-y-5 py-5 basis-1/2">
                         <label for="writer" class="text-zinc-700 text-lg">Penulis</label>
                         <div class="form-control w-full">
-                            <input type="text" placeholder="Penulis" id="writer"
+                            <input type="text" placeholder="Penulis" id="writer" v-model="writer"
                                 class="border-b text-xl xl:w-1/2 text-zinc-800 focus:outline-none">
                         </div>
                         <label for="editor" class="text-zinc-700 text-lg">Editor</label>
                         <div class="form-control w-full">
-                            <input type="text" placeholder="Editor" id="editor"
+                            <input type="text" placeholder="Editor" id="editor" v-model="editor"
                                 class="border-b text-xl xl:w-1/2 text-zinc-800 focus:outline-none">
                         </div>
                         <label for="tag" class="text-zinc-700 text-lg">Tag</label>
@@ -59,8 +61,8 @@
                         </div>
                     </div>
 
-                </div>
-                <QuillEditor contentType="html" theme="snow" v-model:content="content" ref="myQuillEditor"
+                </fieldset>
+                <QuillEditor contentType="html" theme="snow" v-model:content="body" ref="myQuillEditor"
                     toolbar="essential" class="min-h-full text-base text-zinc-700" placeholder="Tulis berita disini" />
             </form>
         </div>
@@ -69,14 +71,15 @@
 <script>
 import { QuillEditor } from '@vueup/vue-quill'
 import '@vueup/vue-quill/dist/vue-quill.snow.css';
-import { XMarkIcon } from '@heroicons/vue/24/outline'
+import { XMarkIcon, Bars3Icon } from '@heroicons/vue/24/outline'
 import NavbarUser from '../../components/complex/User/NavbarUser.vue'
 
 export default {
     components: {
         QuillEditor,
         NavbarUser,
-        XMarkIcon
+        XMarkIcon,
+        Bars3Icon
     },
     data() {
         return {
@@ -87,7 +90,6 @@ export default {
             image: null,
             body: '',
             redacture_id: '',
-            content: '',
             tagContent: '',
             tags: [],
             tagColor: [
@@ -116,12 +118,33 @@ export default {
         handleSubmit(e) {
             e.preventDefault()
             const formData = new FormData()
-            // formData.append('title', this.t)
+            formData.append('title', this.title)
+            formData.append('writer', this.writer)
+            formData.append('editor', this.editor)
+            formData.append('image', this.image)
+            formData.append('redacture_id', this.$cookies.get('PB_UID'))
+            formData.append('body', this.body)
+            for (let i = 1; i <= this.tags.length - 1; i++) {
+                formData.append(`tag${i}`, this.tags[i - 1])
+            }
+            for (let pair of formData.entries()) {
+                console.log(pair[0] + ', ' + pair[1]);
+            }
         }
     },
     watch: {
-        content(val) {
-            console.table(val)
+        title(val) {
+            console.log(val)
+            this.title = val
+        },
+        editor(val) {
+            this.editor = val
+        },
+        writer(val) {
+            this.writer = val
+        },
+        body(val) {
+            this.body = val
         },
         tagContent(val) {
             if (val !== '') {
@@ -130,7 +153,6 @@ export default {
                         let word = val.substring(0, val.length - 1)
                         this.tagContent = ''
                         this.tags.push(word.toLowerCase())
-                        console.log(this.tags)
                     }
                 } else if (this.tags.length > 5) {
                     this.tagContent = ''
