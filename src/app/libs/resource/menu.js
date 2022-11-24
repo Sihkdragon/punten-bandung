@@ -35,7 +35,7 @@ const MENU_BASE = [
     to: "/tabloidMenu",
     sub: [
       { id: 1, name: "Halaman Tabloid", to: "/tabloid" },
-      { id: 2, name: "Tulis", to: "write" },
+      { id: 2, name: "Tulis", to: "/tabloid/write" },
     ],
   },
   {
@@ -43,27 +43,21 @@ const MENU_BASE = [
     name: "Galeri",
     to: "/tabloidMenu",
     sub: [
-      { id: 1, name: "Kelola", to: "tes" },
-      { id: 2, name: "Tampil", to: "apa" },
+      { id: 1, name: "Kelola", to: "/admin/gallery" },
+      { id: 2, name: "Foto Baru", to: "/admin/gallery/post" },
     ],
   },
   {
     id: 4,
     name: "Komentar",
     to: "/tabloidMenu",
-    sub: [
-      { id: 1, name: "Kelola", to: "tes" },
-      { id: 2, name: "Tampil", to: "apa" },
-    ],
+    sub: [{ id: 1, name: "Kelola", to: "/admin/comments" }],
   },
   {
     id: 5,
     name: "Pengguna",
     to: "/tabloidMenu",
-    sub: [
-      { id: 1, name: "Kelola", to: "tes" },
-      { id: 2, name: "Tampil", to: "apa" },
-    ],
+    sub: [{ id: 1, name: "Kelola", to: "/admin/users" }],
   },
 ];
 

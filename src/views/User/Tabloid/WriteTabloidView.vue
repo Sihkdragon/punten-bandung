@@ -18,10 +18,14 @@
                         <input type="text" placeholder="Judul" id="title" v-model="title"
                             class="border-b w-full text-2xl text-zinc-800 focus:outline-none">
                     </div>
-                    <button type="submit"
-                        class="bg-blue-500 px-4 py-1 rounded text-white hover:bg-opacity-80">Submit</button>
                 </div>
                 <div class="flex flex-col w-full gap-y-5 py-5 basis-1/2">
+                    <div class="ml-auto float-right">
+                        <button type="submit"
+                            class="bg-blue-500 px-4 py-1 text-lg rounded text-white hover:bg-opacity-80">Post</button>
+                        <button type="reset"
+                            class="ml-2 bg-white text-lg hover:bg-slate-200 px-4 py-1 border rounded text-slate-500 hover:bg-opacity-80">Reset</button>
+                    </div>
                     <label for="writer" class="text-zinc-700 text-lg">Penulis</label>
                     <div class="form-control w-full">
                         <input type="text" placeholder="Penulis" id="writer" v-model="writer"
@@ -58,7 +62,7 @@
 
             </fieldset>
             <QuillEditor contentType="html" theme="snow" v-model:content="body" ref="myQuillEditor" toolbar="essential"
-                class="min-h-fit relative text-base text-zinc-700" placeholder="Tulis" />
+                class="min-h-fit relative text-base text-zinc-700" placeholder="Tulis tabloid..." />
         </form>
 
     </UserLayout>
@@ -67,9 +71,9 @@
 import { QuillEditor } from '@vueup/vue-quill'
 import '@vueup/vue-quill/dist/vue-quill.snow.css';
 import { XMarkIcon, Bars3Icon } from '@heroicons/vue/24/outline'
-import NavbarUser from '../../components/complex/User/NavbarUser.vue'
-import _Tabloid from '../../app/services/TabloidService';
-import UserLayout from '../../components/layout/UserLayout.vue';
+import NavbarUser from '../../../components/complex/User/NavbarUser.vue'
+import _Tabloid from '../../../app/services/TabloidService';
+import UserLayout from '../../../components/layout/UserLayout.vue';
 
 export default {
     components: {
@@ -125,18 +129,18 @@ export default {
             for (let i = 1; i <= this.tags.length - 1; i++) {
                 formData.append(`tag${i}`, this.tags[i - 1])
             }
-
-            const { status, message } = await _Tabloid.postTabloid(formData)
-            if (status) {
-                const result = confirm(message + '\n ke halaman Tabloid?')
-                if (result) {
-                    this.$router.replace('/tabloid')
+            if (confirm('Apakah anda yakin?')) {
+                const { status, message } = await _Tabloid.postTabloid(formData)
+                if (status) {
+                    const result = confirm(message + '\n ke halaman Tabloid?')
+                    if (result) {
+                        this.$router.replace('/tabloid')
+                    } else {
+                        this.$router.go()
+                    }
                 } else {
-                    this.$router.go()
-
+                    alert(message)
                 }
-            } else {
-                alert(message)
             }
         }
     },

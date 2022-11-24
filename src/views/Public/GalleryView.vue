@@ -12,7 +12,7 @@
                     class="absolute bg-black/20 top-0 right-0 left-0 bottom-0 opacity-0 group-hover:opacity-100 duration-500 transition-opacity flex justify-center items-center flex-col cursor-pointer">
 
                     <figcaption class="font-main text-slate-200 mx-auto text-sm font-semibold text-shadow">
-                        Lembang, Bandung Barat
+                        {{ item.location }}
                     </figcaption>
                     <figcaption class=" text-slate-300 mx-auto text-xs font-extralight text-shadow">
                         by {{ item.author }}
@@ -54,28 +54,8 @@ export default {
                     author: "Titin Salma",
                     image_url: "https://loremflickr.com/500/900",
                     created_at: "2022-11-18T16:46:31.016Z",
-                    update_at: "2022-11-18T16:46:31.016Z"
-                },
-                {
-                    id: 2,
-                    author: "Author 2",
-                    image_url: "https://loremflickr.com/500/901",
-                    created_at: "2022-11-18T16:46:31.016Z",
-                    update_at: "2022-11-18T16:46:31.016Z"
-                },
-                {
-                    id: 3,
-                    author: "Author 3",
-                    image_url: "https://loremflickr.com/500/902",
-                    created_at: "2022-11-18T16:46:31.016Z",
-                    update_at: "2022-11-18T16:46:31.016Z"
-                },
-                {
-                    id: 4,
-                    author: "Author 4",
-                    image_url: "https://loremflickr.com/500/903",
-                    created_at: "2022-11-18T16:46:31.016Z",
-                    update_at: "2022-11-18T16:46:31.016Z"
+                    update_at: "2022-11-18T16:46:31.016Z",
+                    location: 'Dummy, Place'
                 },
             ]
         }

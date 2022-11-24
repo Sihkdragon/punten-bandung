@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full flex flex-grow overflow-hidden h-[500px] bg-slate-500" data-aos="fade-up"
+    <div class="w-full flex flex-grow overflow-hidden h-96 2xl:h-[500px] bg-slate-500" data-aos="fade-up"
         data-aos-duration="3000">
         <div v-for="image in imageURL" :key="image.id" class="min-w-full bg-white h-full  duration-1000"
             :style="transX">

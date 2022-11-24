@@ -9,7 +9,9 @@ import RegisterView from "../views/Auth/RegisterView.vue";
 import NotFoundView from "../views/Public/NotFoundView.vue";
 // User Page Import
 import DashboardView from "../views/User/Dashboard.vue";
-import WriteTabloidView from "../views/User/WriteTabloidView.vue";
+import WriteTabloidView from "../views/User/Tabloid/WriteTabloidView.vue";
+import GalleryManagement from "../views/User/Gallery/GalleryManagement.vue";
+import UploadGallery from "../views/User/Gallery/UploadGallery.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -54,9 +56,19 @@ const router = createRouter({
       component: DashboardView,
     },
     {
-      path: "/write",
+      path: "/tabloid/write",
       name: "tulis",
       component: WriteTabloidView,
+    },
+    {
+      path: "/admin/gallery",
+      name: "galeri management",
+      component: GalleryManagement,
+    },
+    {
+      path: "/admin/gallery/post",
+      name: "post foto",
+      component: UploadGallery,
     },
     {
       path: "/:pathMatch(.*)*",

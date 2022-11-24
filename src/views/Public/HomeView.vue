@@ -4,8 +4,8 @@
 <template>
   <Navbar />
   <Sidebar />
-  <main class=" flex flex-col md:gap-y-5 py-10">
-    <section id="jumbotron" class=" h-full container min-h-screen pt-10  md:pt-24 2xl:pt-28  relative flex flex-wrap">
+  <main class=" flex flex-col md:gap-y-5 py-4 2xl:py-10">
+    <section id="jumbotron" class=" h-full container min-h-screen pt-10  md:pt-16 2xl:pt-28  relative flex flex-wrap">
       <div class="hidden md:flex gap-x-4 justify-center text-white items-center my-2 2xl:my-5 font-main cursor-default">
         <span
           class="bg-rose-600 hover:bg-opacity-80 duration-300 rounded-full px-1 md:px-2 md:py-1 text-xs 2xl:text-base"
@@ -27,7 +27,7 @@
           <span class="text-sm 2xl:text-base ">
             Explore More
           </span>
-          <ChevronDownIcon class="w-2 -mt-1  2xl:w-8 mx-auto text-slate-500 group-hover:translate-y-1 duration-500" />
+          <ChevronDownIcon class="w-5 -mt-1  2xl:w-8 mx-auto text-slate-500 group-hover:translate-y-1 duration-500" />
         </a>
       </div>
     </section>

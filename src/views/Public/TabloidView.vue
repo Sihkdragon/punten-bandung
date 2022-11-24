@@ -24,15 +24,21 @@
                             <div class="flex justify-between  items-center my-4">
                                 <div class="flex gap-4 items-center">
                                     <span class="text-slate-600">Tag : </span>
-                                    <div
-                                        class="rounded-full text-xs px-2 py-1 bg-blue-500 text-slate-100 cursor-pointer hover:bg-opacity-80 duration-300">
+                                    <div v-if="post.tags.tag1"
+                                        class="rounded-full text-xs px-2 py-1 bg-rose-500 text-slate-100 cursor-pointer hover:bg-opacity-80 duration-300">
                                         {{ post.tags.tag1 }}</div>
-                                    <div
+                                    <div v-if="post.tags.tag2"
                                         class="rounded-full text-xs px-2 py-1 bg-amber-500 text-slate-100 cursor-pointer hover:bg-opacity-80 duration-300">
                                         {{ post.tags.tag2 }}</div>
-                                    <div
+                                    <div v-if="post.tags.tag3"
                                         class="rounded-full text-xs px-2 py-1 bg-lime-500 text-slate-100 cursor-pointer hover:bg-opacity-80 duration-300">
                                         {{ post.tags.tag3 }}</div>
+                                    <div v-if="post.tags.tag4"
+                                        class="rounded-full text-xs px-2 py-1 bg-slate-500 text-slate-100 cursor-pointer hover:bg-opacity-80 duration-300">
+                                        {{ post.tags.tag4 }}</div>
+                                    <div v-if="post.tags.tag5"
+                                        class="rounded-full text-xs px-2 py-1 bg-blue-500 text-slate-100 cursor-pointer hover:bg-opacity-80 duration-300">
+                                        {{ post.tags.tag5 }}</div>
                                 </div>
                                 <a :href="`/tabloid/${post.id}`"
                                     class="border border-slate-700 text-slate-700 px-3 py-1 rounded duration-500 hover:bg-blue-500 hover:text-white hover:border-blue-700">Baca</a>
