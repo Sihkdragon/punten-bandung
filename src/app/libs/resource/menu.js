@@ -34,8 +34,9 @@ const MENU_BASE = [
     name: "Tabloid",
     to: "/tabloidMenu",
     sub: [
-      { id: 1, name: "Halaman Tabloid", to: "/tabloid" },
+      { id: 1, name: "Kelola", to: "/tabloid/manage" },
       { id: 2, name: "Tulis", to: "/tabloid/write" },
+      { id: 3, name: "Halaman Tabloid", to: "/tabloid" },
     ],
   },
   {

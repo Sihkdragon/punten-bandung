@@ -10,6 +10,7 @@ import NotFoundView from "../views/Public/NotFoundView.vue";
 // User Page Import
 import DashboardView from "../views/User/Dashboard.vue";
 import WriteTabloidView from "../views/User/Tabloid/WriteTabloidView.vue";
+import ManageTabloidView from "../views/User/Tabloid/ManageTabloidView.vue";
 import GalleryManagement from "../views/User/Gallery/GalleryManagement.vue";
 import UploadGallery from "../views/User/Gallery/UploadGallery.vue";
 const router = createRouter({
@@ -54,6 +55,11 @@ const router = createRouter({
       path: "/dashboard",
       name: "dashboard",
       component: DashboardView,
+    },
+    {
+      path: "/tabloid/manage",
+      name: "Kelola",
+      component: ManageTabloidView,
     },
     {
       path: "/tabloid/write",
