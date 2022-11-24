@@ -50,9 +50,6 @@ export default {
         password(val) {
             this.password = val
         },
-        role(val) {
-            this.role = val
-        },
         reTypePassword(val) {
             this.reTypePassword = val
         }
@@ -72,7 +69,8 @@ export default {
                     email: this.email,
                     name: this.name,
                     username: this.username,
-                    password: this.password
+                    password: this.password,
+                    role: this.role
                 }
 
                 const res = await Auth.Register(data)

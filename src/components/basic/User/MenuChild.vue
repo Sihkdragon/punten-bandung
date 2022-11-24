@@ -23,6 +23,7 @@
 
 <script>
 import { ChevronDownIcon } from '@heroicons/vue/24/outline';
+import { MENU_USER } from '../../../app/libs/resource/menu'
 export default {
     components: {
         ChevronDownIcon,
@@ -36,39 +37,15 @@ export default {
             }
         }
     },
+    mounted() {
+        this.menuList = this.$cookies.get("PB_Role") === 'admin' ? MENU_USER : MENU_USER.slice(0, -2)
+    },
     data() {
         return {
             activeID: null,
             isOpen: true,
-            menuList: [
-                {
-                    id: 1, name: 'Dashboard', to: '/dashboard', sub: undefined
-                },
-                {
-                    id: 2, name: 'Tabloid', to: '/tabloidMenu', sub: [
-                        { id: 1, name: 'Kelola', to: 'tes' },
-                        { id: 2, name: 'Tulis', to: 'write' }
-                    ]
-                },
-                {
-                    id: 3, name: 'Galeri', to: '/tabloidMenu', sub: [
-                        { id: 1, name: 'Kelola', to: 'tes' },
-                        { id: 2, name: 'Tampil', to: 'apa' }
-                    ]
-                },
-                {
-                    id: 4, name: 'Komentar', to: '/tabloidMenu', sub: [
-                        { id: 1, name: 'Kelola', to: 'tes' },
-                        { id: 2, name: 'Tampil', to: 'apa' }
-                    ]
-                },
-                {
-                    id: 5, name: 'Pengguna', to: '/tabloidMenu', sub: [
-                        { id: 1, name: 'Kelola', to: 'tes' },
-                        { id: 2, name: 'Tampil', to: 'apa' }
-                    ]
-                },
-            ]
+            menuList: [],
+
         }
     }
 }

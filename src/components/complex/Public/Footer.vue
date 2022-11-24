@@ -51,7 +51,7 @@
 </template>
 
 <script>
-import MENU from '@/app/libs/resource/menu.js';
+import { MENU } from '@/app/libs/resource/menu.js';
 import InstagramIcon from '@/assets/icon/InstagramIcon.vue'
 import WhatsappIcon from '@/assets/icon/WhatsappIcon.vue'
 import BrowserIcon from '@/assets/icon/BrowserIcon.vue'

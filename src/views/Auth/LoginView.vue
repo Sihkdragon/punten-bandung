@@ -48,7 +48,7 @@ export default {
             e.preventDefault()
             const result = await Auth.Login(this.username, this.password)
             if (result === true) {
-                this.$router.replace('/dashboard')
+                this.$router.replace('/dashboard').then(() => { this.$router.go() })
             } else {
                 alert(result)
             }

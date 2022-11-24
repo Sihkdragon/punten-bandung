@@ -28,9 +28,11 @@ export default {
         XMarkIcon,
         Bars3Icon
     },
+
+
     data() {
         return {
-            isNavOpen: true
+            isNavOpen: true,
         }
     },
     methods: {

@@ -23,9 +23,15 @@ class TabloidService extends BaseService {
     });
     const result = await response.json();
     if (response.status === 201) {
-      return result.message;
+      return {
+        status: true,
+        message: result.message,
+      };
     } else {
-      return result.message;
+      return {
+        status: false,
+        message: result.message,
+      };
     }
   }
 }

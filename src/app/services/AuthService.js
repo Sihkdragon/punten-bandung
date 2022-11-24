@@ -20,7 +20,6 @@ class AuthService {
       VueCookies.set("PB_UserName", payload.data.name, "1d");
       VueCookies.set("PB_Role", payload.data.role, "1d");
       VueCookies.set("PB_UID", payload.data.id, "1d");
-      console.log(VueCookies);
       return true;
     }
     return result.message;

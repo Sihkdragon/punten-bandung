@@ -19,13 +19,21 @@
             <div class="w-full h-[1px] bg-slate-400 my-10"></div>
             <div class="flex items-center gap-5 mb-28">
                 <span>Tags : </span>
-                <div class="px-3 py-1 bg-blue-500 rounded-full text-slate-100 flex justify-center items-center text-sm">
+                <div class="px-3 py-1 bg-rose-500 rounded-full text-slate-100 flex justify-center items-center text-sm"
+                    v-show="post.tags.tag1 ? true : false">
                     {{ post.tags.tag1 }}</div>
-                <div
-                    class="px-3 py-1 bg-amber-500 rounded-full text-slate-100 flex justify-center items-center text-sm">
+                <div class="px-3 py-1 bg-amber-500 rounded-full text-slate-100 flex justify-center items-center text-sm"
+                    v-show="post.tags.tag2 ? true : false">
                     {{ post.tags.tag2 }}</div>
-                <div class="px-3 py-1 bg-lime-500 rounded-full text-slate-100 flex justify-center items-center text-sm">
+                <div class="px-3 py-1 bg-lime-500 rounded-full text-slate-100 flex justify-center items-center text-sm"
+                    v-show="post.tags.tag3 ? true : false">
                     {{ post.tags.tag3 }}</div>
+                <div class="px-3 py-1 bg-slate-500 rounded-full text-slate-100 flex justify-center items-center text-sm"
+                    v-show="post.tags.tag4 ? true : false">
+                    {{ post.tags.tag4 }}</div>
+                <div class="px-3 py-1 bg-blue-500 rounded-full text-slate-100 flex justify-center items-center text-sm"
+                    v-show="post.tags.tag5 ? true : false">
+                    {{ post.tags.tag5 }}</div>
             </div>
             <H1>Comments</H1>
             <form>
