@@ -1,5 +1,5 @@
 <template>
-    <table class="table-fixed border border-gray-400 rounded-md overflow-hidden">
+    <table class="table-fixed border border-gray-400 rounded-md ">
         <thead class="border border-gray-400 rounded-md overflow-hidden">
             <tr class="border border-gray-400">
                 <th v-for="item in TableHead" :key="item"

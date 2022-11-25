@@ -1,7 +1,7 @@
 <template>
     <Navbar />
     <Sidebar />
-    <section class="min-h-screen container py-10">
+    <section class="min-h-screen container py-10 2xl:py-16">
         <H1>Gallery</H1>
         <div class="grid grid-col-1 md:grid-cols-2 xl:grid-cols-4 gap-5 duration-500">
             <figure v-for="item in galleryData" :key="item.id" data-aos="fade-up" data-aos-duration="3000"
