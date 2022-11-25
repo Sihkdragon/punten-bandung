@@ -11,7 +11,7 @@
                 <div
                     class="absolute bg-black/20 top-0 right-0 left-0 bottom-0 opacity-0 group-hover:opacity-100 duration-500 transition-opacity flex justify-center items-center flex-col cursor-pointer">
 
-                    <figcaption class="font-main text-slate-200 mx-auto text-sm font-semibold text-shadow">
+                    <figcaption class="font-main text-slate-200 mx-auto text-sm font-semibold text-shadow text-center">
                         {{ item.location }}
                     </figcaption>
                     <figcaption class=" text-slate-300 mx-auto text-xs font-extralight text-shadow">

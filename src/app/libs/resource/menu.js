@@ -46,6 +46,7 @@ const MENU_BASE = [
     sub: [
       { id: 1, name: "Kelola", to: "/admin/gallery" },
       { id: 2, name: "Foto Baru", to: "/admin/gallery/post" },
+      { id: 3, name: "Halaman Gallery", to: "/gallery" },
     ],
   },
   {

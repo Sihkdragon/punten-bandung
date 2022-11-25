@@ -47,7 +47,7 @@ export default {
             const MaxSize = 2 // MB
             if (e.target.files[0].size / 1048576 > MaxSize) {
                 alert('Ukuran gambar terlalu besar')
-                this.image = null
+                this.image = ''
             } else {
                 this.ShownImage = URL.createObjectURL(file)
                 this.image = file

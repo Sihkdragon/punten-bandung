@@ -1,29 +1,32 @@
 <template>
-    <table class="table-fixed border rounded-md overflow-hidden">
-        <thead class="border rounded-md overflow-hidden">
-            <tr class="border">
-                <th v-for="item in TableHead" :key="item" class="border px-2 py-3 text-center capitalize">
+    <table class="table-fixed border border-gray-400 rounded-md overflow-hidden">
+        <thead class="border border-gray-400 rounded-md overflow-hidden">
+            <tr class="border border-gray-400">
+                <th v-for="item in TableHead" :key="item"
+                    class="border border-gray-400 px-2 py-3 text-center capitalize">
                     {{ item }}
                 </th>
             </tr>
         </thead>
-        <tbody class="border">
-            <tr v-for="(data, i) in tableData" :key="data.id" class="border">
-                <td class="border px-2 py-3 text-center">{{ ++i }}</td>
-                <td class="border px-2 py-3 text-center"><img :src="data.thumbnail_url" alt="item image" class="w-80">
+        <tbody class="border border-gray-400">
+            <tr v-for="(data, i) in tableData" :key="data.id" class="border border-gray-400">
+                <td class="border border-gray-400 px-2 py-3 text-center">{{ ++i }}</td>
+                <td class="border border-gray-400 px-2 py-3 text-center"><img :src="data.thumbnail_url" alt="item image"
+                        class="w-80">
                 </td>
-                <td class="border px-2 py-3 text-center">{{ data.title }}</td>
-                <td class="border px-2 py-3 text-center capitalize">{{ data.redacture.name }}</td>
-                <td class="border px-2 py-3 text-center capitalize">{{ data.editor }}</td>
-                <td class="border px-2 py-3 text-center capitalize">{{ data.writer }}</td>
-                <td v-html="data.body.substring(0, 50) + '...</p>'" class="border px-2 py-3 text-center"></td>
-                <td class="border px-2 py-3 text-center">
+                <td class="border border-gray-400 px-2 py-3 text-center">{{ data.title }}</td>
+                <td class="border border-gray-400 px-2 py-3 text-center capitalize">{{ data.redacture.name }}</td>
+                <td class="border border-gray-400 px-2 py-3 text-center capitalize">{{ data.editor }}</td>
+                <td class="border border-gray-400 px-2 py-3 text-center capitalize">{{ data.writer }}</td>
+                <td v-html="data.body.substring(0, 50) + '...</p>'"
+                    class="border border-gray-400 px-2 py-3 text-center"></td>
+                <td class="border border-gray-400 px-2 py-3 text-center">
                     <div class="flex w-full h-full gap-2">
 
                         <button
                             class="bg-blue-500 rounded px-2 py-1 text-white text-sm hover:bg-opacity-80 duration-500">Edit</button>
-                        <button
-                            class="bg-red-500 rounded px-2 py-1 text-white text-sm hover:bg-opacity-80 duration-500">Delete</button>
+                        <button class="bg-red-500 rounded px-2 py-1 text-white text-sm hover:bg-opacity-80 duration-500"
+                            @click="DeleteTabloid(data.id)">Delete</button>
                     </div>
                 </td>
             </tr>
@@ -61,6 +64,19 @@ export default {
 
                 }
             ]
+        }
+    },
+    methods: {
+        async DeleteTabloid(id) {
+            if (confirm('Apakah anda yakin akan menghapus item ini?')) {
+                const res = await _Tabloid.deleteTabloid(id)
+                if (res.status) {
+                    alert(res.message)
+                    this.$router.go()
+                } else {
+                    alert(res.message)
+                }
+            }
         }
     },
     mounted() {

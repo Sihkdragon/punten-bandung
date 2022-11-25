@@ -34,6 +34,26 @@ class TabloidService extends BaseService {
       };
     }
   }
+
+  async deleteTabloid(id) {
+    const response = await fetch(this.url + "/" + id, {
+      method: "DELETE",
+      headers: API_HEADERS_FORMDATA,
+      body: data,
+    });
+    const result = await response.json();
+    if (response.status === 200) {
+      return {
+        status: true,
+        message: result.message,
+      };
+    } else {
+      return {
+        status: false,
+        message: result.message,
+      };
+    }
+  }
 }
 
 const _Tabloid = new TabloidService();

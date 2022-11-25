@@ -1,6 +1,5 @@
 <template>
     <UserLayoutVue :Head="'Dashboard'">
-        dashboard
     </UserLayoutVue>
 </template>
 
@@ -8,7 +7,7 @@
 import UserLayoutVue from '../../components/layout/UserLayout.vue';
 export default {
     components: {
-        UserLayoutVue
+        UserLayoutVue,
     }
 }
 </script>
