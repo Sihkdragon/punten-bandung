@@ -39,7 +39,6 @@ class TabloidService extends BaseService {
     const response = await fetch(this.url + "/" + id, {
       method: "DELETE",
       headers: API_HEADERS_FORMDATA,
-      body: data,
     });
     const result = await response.json();
     if (response.status === 200) {

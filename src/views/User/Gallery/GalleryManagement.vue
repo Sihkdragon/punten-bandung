@@ -1,13 +1,16 @@
 <template>
-    <UserLayout :Head="'Manajemen Galeri'">
+    <UserLayout :Head="'Kelola Galeri'">
+        <GalleryTable />
     </UserLayout>
 </template>
 
 <script>
+import GalleryTable from '../../../components/complex/User/Table/GalleryTable.vue';
 import UserLayout from '../../../components/layout/UserLayout.vue'
 export default {
     components: {
-        UserLayout
+        UserLayout,
+        GalleryTable
     }
 }
 </script>

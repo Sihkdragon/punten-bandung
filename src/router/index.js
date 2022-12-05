@@ -13,6 +13,7 @@ import WriteTabloidView from "../views/User/Tabloid/WriteTabloidView.vue";
 import ManageTabloidView from "../views/User/Tabloid/ManageTabloidView.vue";
 import GalleryManagement from "../views/User/Gallery/GalleryManagement.vue";
 import UploadGallery from "../views/User/Gallery/UploadGallery.vue";
+import UsersManagement from "../views/User/Pengguna/UsersManagement.vue";
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -75,6 +76,11 @@ const router = createRouter({
       path: "/admin/gallery/post",
       name: "post foto",
       component: UploadGallery,
+    },
+    {
+      path: "/admin/users",
+      name: "Pengguna Management",
+      component: UsersManagement,
     },
     {
       path: "/:pathMatch(.*)*",

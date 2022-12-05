@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Table from '../../../components/complex/User/TabloidsTable.vue';
+import Table from '../../../components/complex/User/Table/TabloidsTable.vue';
 import UserLayout from '../../../components/layout/UserLayout.vue';
 
 export default {

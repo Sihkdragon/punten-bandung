@@ -6,7 +6,7 @@
                 <h1 class="text-4xl font-bold text-zinc-600">{{ Head }}</h1>
                 <h1 class="text-lg text-zinc-600 cursor-pointer select-none"
                     @click="e => { e.stopPropagation(); isLogoutShown = !isLogoutShown }">Hi, {{ username
-                    }}!</h1>
+                    }}</h1>
                 <div class="absolute right-4 2xl:right-16 -bottom-8" v-show="isLogoutShown">
                     <button
                         class="border px-2 py-1 rounded text-center hover:bg-slate-200 hover:text-white duration-200"
